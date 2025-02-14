@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Simples</title>
+    <link rel="icon" type="icon" href="icon.png">
+    <style>
+        body{
+            text-align:center;
+            background-color: lightslategray;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        input{
+            background-color: darkcyan;
+        }
+    
+    
+
+    </style>
+</head>
+<body>
+    <h1>Quiz dos gênios</h1>
+    <form id="quiz">
+        <div>
+            <p>1. Qual é o animal com o melhor coice?</p>
+            <input type="radio" name="q1" value="e"> a) Humano<br>
+            <input type="radio" name="q1" value="e"> b) Elefante<br>
+            <input type="radio" name="q1" value="e"> c) Tubarão<br>
+            <input type="radio" name="q1" value="a"> d) Girafa<br>
+        </div>
+        <div>
+            <p>2. Quantos planetas existem no sistema solar?</p>
+            <input type="radio" name="q2" value="e"> a) 7<br>
+            <input type="radio" name="q2" value="a"> b) 8 certo<br>
+            <input type="radio" name="q2" value="e"> c) 9<br>
+            <input type="radio" name="q2" value="e"> c) 4<br>
+        </div>
+        <div>
+            <p>3. <div id="minha-div">
+                <img src="bispo.png" width="75px" height="75px" text-lign="center">
+            </div></p>
+            <input type="radio" name="q3" value="e"> a) <br>
+            <input type="radio" name="q3" value="a"> b) Certo<br>
+            <input type="radio" name="q3" value="e"> c) <br>
+            <input type="radio" name="q3" value="e"> c) <br>
+        </div>
+        <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+    </form>
+                   
+    <script>
+          /*o valor "e" significa errado e "a" significa certo :) */
+        function verificarRespostas() {
+            let q1 = document.querySelector('input[name="q1"]:checked').value;
+            let q2 = document.querySelector('input[name="q2"]:checked').value;
+
+            if (q1 === "b" && q2 === "b") {
+                alert("Parabéns! Todas as respostas estão corretas!");
+            } else {
+                alert("Algumas respostas estão incorretas. Tente novamente!");
+            }
+        }
+    </script>
+</body>
+</html>
+Run
