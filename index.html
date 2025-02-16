@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Simples</title>
-    <link rel="icon" type="icon" href="icon.png">
+    <title>Quiz dos gênios</title>
+    <link rel="icon" type="image" href="icon1.png">
     <style>
         body{
             text-align:center;
@@ -34,7 +34,7 @@
             <input type="radio" name="q2" value="e"> a) 7<br>
             <input type="radio" name="q2" value="a"> b) 8 certo<br>
             <input type="radio" name="q2" value="e"> c) 9<br>
-            <input type="radio" name="q2" value="e"> c) 4<br>
+            <input type="radio" name="q2" value="e"> d) 4<br>
         </div>
         <div>
             <p>3. <div id="minha-div">
@@ -43,18 +43,19 @@
             <input type="radio" name="q3" value="e"> a) <br>
             <input type="radio" name="q3" value="a"> b) Certo<br>
             <input type="radio" name="q3" value="e"> c) <br>
-            <input type="radio" name="q3" value="e"> c) <br>
+            <input type="radio" name="q3" value="e"> d) <br>
         </div>
         <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
     </form>
                    
     <script>
-          /*o valor "e" significa errado e "a" significa certo :) */
+          /*o valor "e" significa errado e "a" significa acerto :) */
         function verificarRespostas() {
             let q1 = document.querySelector('input[name="q1"]:checked').value;
             let q2 = document.querySelector('input[name="q2"]:checked').value;
+            let q3 = document.querySelector('input[name="q3"]:checked').value;
 
-            if (q1 === "b" && q2 === "b") {
+            if (q1 === "a" && q2 === "a" && q3 === "a") {
                 alert("Parabéns! Todas as respostas estão corretas!");
             } else {
                 alert("Algumas respostas estão incorretas. Tente novamente!");
@@ -63,4 +64,3 @@
     </script>
 </body>
 </html>
-Run
